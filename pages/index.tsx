@@ -1,12 +1,12 @@
 import React from "react";
 import { Htag, P, Tag, Button, Rating } from "../components";
-import { Layout } from "../layout/Layout/Layout";
+import { Layout, withLayot } from "../layout/Layout/Layout";
 
-export default function Home(): JSX.Element {
+function Home(): JSX.Element {
   const [counter, setCounter] = React.useState<number>(0);
 
   return (
-    <Layout>
+    <>
       <Htag tag="h3">{counter}</Htag>
       <Button
         appearance="primary"
@@ -27,6 +27,8 @@ export default function Home(): JSX.Element {
         Маленький
       </Tag>
       <Rating rating={4} isEditable />
-    </Layout>
+    </>
   );
 }
+
+export default withLayot(Home);

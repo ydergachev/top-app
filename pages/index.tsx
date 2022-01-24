@@ -1,11 +1,11 @@
 import { GetStaticProps } from "next";
 import React from "react";
 import { Htag, P, Tag, Button, Rating } from "../components";
-import { Layout, withLayot } from "../layout/Layout/Layout";
+import { withLayot } from "../layout/Layout/Layout";
 import { MenuItem } from "../interfaces/menu.interface";
 import axios from "axios";
 
-function Home({ menu, firstCategory }): JSX.Element {
+function Home({ menu, firstCategory }: HomeProps): JSX.Element {
   const [counter, setCounter] = React.useState<number>(0);
 
   return (
